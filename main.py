@@ -1,4 +1,4 @@
-from quiz_generator import HistoryQuizGenerator, MathQuizGenerator, CreateHistoryQuiz, CreateMathQuiz
+from quiz_generator import HistoryQuizGenerator, MathQuizGenerator, History, Math
 from schema import Quiz, Quizzes
 
 
@@ -13,8 +13,9 @@ history_test_case_3 = {"content": "Civil War", "keywords": ["slavery"]}
 
 math_test_case_1 = {}
 
-history_quiz_generator = CreateHistoryQuiz()
-math_quiz_generator = CreateMathQuiz()
+history_quiz_generator = History()
+math_quiz_generator = Math()
+
 
 def history_question(history_test_case: dict) -> Quiz:
     quiz_result = history_quiz_generator.create_quiz(**history_test_case)
